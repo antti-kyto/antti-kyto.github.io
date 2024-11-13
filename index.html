@@ -17,21 +17,21 @@
     navigator.userAgent.indexOf("Chrome") == -1
   ) {
     alert(
-      "This browser is not supported. Please use Chrome/Edge (119 or later) or Firefox (120 or later)."
+      "Pahoittelut, mutta tämä sivu ei toimi Safarilla. Käytä jotain seuraavista selaimista: Chrome, Firefox, Edge."
     );
   }
   // check if chrome version is 118 or older
   if (navigator.userAgent.indexOf("Chrome") != -1) {
     var version = navigator.userAgent.match(/Chrome\/(\d+)/)[1];
     if (version < 119) {
-      alert("Please use Chrome/Edge 119 or later or Firefox 120 or later.");
+      alert("Sinulla on vanha selainversio. Päivitä selain.");
     }
   }
   // check if firefox version is 119 or older
   if (navigator.userAgent.indexOf("Firefox") != -1) {
     var version = navigator.userAgent.match(/Firefox\/(\d+)/)[1];
     if (version < 120) {
-      alert("Please use Chrome/Edge 119 or later or Firefox 120 or later.");
+      alert("Sinulla on vanha selainversio. Päivitä selain.");
     }
   }
 </script>
