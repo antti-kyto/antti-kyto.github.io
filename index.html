@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanaseppä</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="styles.css" />
     <script type="application/javascript" src="composeApp.js"></script>
-</head>
-<body>
-</body>
+  </head>
+  <body></body>
 </html>
+
+<!-- Add script to show not supported if using safar -->
+<script>
+  if (
+    navigator.userAgent.indexOf("Safari") != -1 &&
+    navigator.userAgent.indexOf("Chrome") == -1
+  ) {
+    alert(
+      "This browser is not supported. Please use Chrome/Edge (119 or later) or Firefox (120 or later)."
+    );
+  }
+  // check if chrome version is 118 or older
+  if (navigator.userAgent.indexOf("Chrome") != -1) {
+    var version = navigator.userAgent.match(/Chrome\/(\d+)/)[1];
+    if (version < 119) {
+      alert("Please use Chrome/Edge 119 or later or Firefox 120 or later.");
+    }
+  }
+  // check if firefox version is 119 or older
+  if (navigator.userAgent.indexOf("Firefox") != -1) {
+    var version = navigator.userAgent.match(/Firefox\/(\d+)/)[1];
+    if (version < 120) {
+      alert("Please use Chrome/Edge 119 or later or Firefox 120 or later.");
+    }
+  }
+</script>
